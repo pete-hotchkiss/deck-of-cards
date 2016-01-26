@@ -1,19 +1,19 @@
 body {
   @include rem('margin', 15px);
   height: inherit;
+  background-color: #042416;
 }
 
 .game__stage {
   height: auto;
   position: relative;
   height: 400px;
+  background-color: #0A5937;
 }
 
 .game__stage__block {
   position: relative;
 }
-
-
 
 .game__stage__block {
 // .game__stage__block--messaging {
@@ -21,6 +21,8 @@ body {
 }
 
 .game__stage__block--ui {
+      // padding-top: 20px;
+  @include rem(padding-top, 20px);
   @include display(flex);
   @include flex-direction(row);
   @include justify-content(flex-start);

@@ -1,13 +1,28 @@
 .button, input {
-  border: 3px solid grey;
+  border: 3px solid rgba(255,255,255,.25);
   @include rem('width', 180px);
 }
 .button {
-	cursor: pointer;
+  cursor: pointer;
   & p {
     // border: 1px solid green;
     text-align: center;
   }
+  @include rem(border-radius, 20px);
+  @include rem(font-size, 17px);
+  // border-radius: 21px;
+  color: #fff;
+  font-weight: 900;
+
+  background: rgba(164,179,87,1);
+background: -moz-linear-gradient(top, rgba(164,179,87,1) 0%, rgba(117,137,12,1) 44%, rgba(117,137,12,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(164,179,87,1)), color-stop(44%, rgba(117,137,12,1)), color-stop(100%, rgba(117,137,12,1)));
+background: -webkit-linear-gradient(top, rgba(164,179,87,1) 0%, rgba(117,137,12,1) 44%, rgba(117,137,12,1) 100%);
+background: -o-linear-gradient(top, rgba(164,179,87,1) 0%, rgba(117,137,12,1) 44%, rgba(117,137,12,1) 100%);
+background: -ms-linear-gradient(top, rgba(164,179,87,1) 0%, rgba(117,137,12,1) 44%, rgba(117,137,12,1) 100%);
+background: linear-gradient(to bottom, rgba(164,179,87,1) 0%, rgba(117,137,12,1) 44%, rgba(117,137,12,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4b357', endColorstr='#75890c', GradientType=0 );
+
 }
 .button--shuffle {
   // position: relative;

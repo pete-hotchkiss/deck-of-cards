@@ -29,7 +29,7 @@ var CardDisplay = function( e, c, d ) {
   this.renderCards = function( crds ) {
     var t = this;
     var client = new XMLHttpRequest();
-      client.open('GET', '/data/card.html');
+      client.open('GET', 'data/card.html');
       client.onreadystatechange = function() {
         if (client.readyState === 4 && client.status === 200) {
           // render the cards drawn to the screen

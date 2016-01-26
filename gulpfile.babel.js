@@ -74,18 +74,16 @@ gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
 gulp.task('html', ['styles'], () => {
   const assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
-  return gulp.src(['app/*.html', 'app/**/*.*'])
+  return gulp.src(['app/*.html', 'app/**/*.*', '!app/scripts/**','!app/jade/**', '!app/tests/**'])
     .pipe(assets)
-    .pipe($.if(argv.stripdebug, stripConsoleOutput()))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
     .pipe(assets.restore())
     .pipe($.useref())
-    .pipe($.if('*.html', $.inlineSource()))
     .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
-    .pipe($.if('*.html', ext_replace('.php') ))
     .pipe(gulp.dest('dist'));
 });
+
 
 gulp.task('images', () => {
   return gulp.src('app/images/**/*')

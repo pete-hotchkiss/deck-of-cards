@@ -1,0 +1,45 @@
+$card-width: 105px;
+$card-height: 143px;
+$virtical-buffer: 40px;
+
+.card__element {
+  @include rem('min-height', 310px);
+}
+
+.card__element--stack {
+  @include rem(width, 160px);
+  float:left;
+}
+
+.card__element--drawn {
+  @include rem('margin-left', 160px);
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(flex-start);
+  @include flex-wrap(wrap);
+}
+.card__wrapper {
+
+}
+
+.card__front {
+  height: 143px;
+  width: $card-width;
+  background: url('/images/card-faces.png') no-repeat top left;
+}
+
+$ccard: 0;
+@while $ccard <= 14 {
+	.c#{$ccard} {
+		background-position-x: 0 - ($ccard * $card-width) !important;
+	}
+	$ccard: $ccard + 1;
+}
+
+$rrcard: 0;
+@while $rrcard <= 4 {
+  .r#{$rrcard} {
+    background-position-y: 0 - ($rrcard * $card-height) !important;
+  }
+  $rrcard: $rrcard + 1;
+}

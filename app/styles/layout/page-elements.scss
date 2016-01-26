@@ -1,0 +1,55 @@
+body {
+  @include rem('margin', 15px);
+  height: inherit;
+}
+
+.game__stage {
+  height: auto;
+  position: relative;
+  height: 400px;
+}
+
+.game__stage__block {
+  position: relative;
+}
+
+
+
+.game__stage__block {
+// .game__stage__block--messaging {
+  @include rem(margin, 15px );
+}
+
+.game__stage__block--ui {
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(flex-start);
+
+  & div:not(:first-child) {
+    @include rem(margin, 0 15px 0 15px);
+  }
+  & div:nth-child(1) {
+    @include rem(margin-right, 15px);
+    // border:10px solid gold;
+  }
+}
+
+.game__stage__block--messaging {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  & p {
+    margin: 0;
+    @include rem(padding, 15px);
+  }
+}
+
+.error-message {
+  color: red;
+  background-color: pink;
+}
+
+.ui-element {
+  @include rem('height', 60px);
+}

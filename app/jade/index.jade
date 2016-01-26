@@ -1,0 +1,24 @@
+doctype html
+<!--[if lt IE 7]>html(lang='en-GB' class='no-js lt-ie9 lt-ie8 lt-ie7')<![endif]--><!--[if (IE 7)&!(IEMobile)]>html(lang='en-GB' class='no-js lt-ie9 lt-ie8')<![endif]--><!--[if (IE 8)&!(IEMobile)]>html(lang='en-GB' class='no-js lt-ie9')<![endif]--><!--[if gt IE 8]><!-->
+html(release='##tag##' lang='en-GB').no-js <!--<![endif]-->
+	title Deck of Cards - Pete Hotchkiss
+	link(rel='stylesheet', href='/styles/main.css')
+	body(itemscope)
+		div.game__stage__block--messaging.faded.cananimate.hidden.debug
+			p Messaging will go here
+		div.game__stage.debug
+			div.game__stage__block.game__stage__block--ui.debug
+				div.ui-element.button.button--shuffle
+					p
+				div.ui-element
+					input(type='number' max='52' min='1').ui-element.form-field.form-field__text.form-field__text--extract.disabled
+				div.ui-element.button.button--draw.disabled
+					p
+				div.ui-element.button.button--sort.disabled
+						p
+			div.game__stage__block.debug
+				div.card__element.card__element--stack.debug
+					div.card.card__front.c3.r4
+				div.card__element.card__element--drawn.debug
+					
+		include ./page-components/js-includes.jade

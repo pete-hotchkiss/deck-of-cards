@@ -1,0 +1,54 @@
+@import "../bower_components/normalize-scss/_normalize";
+@import "../bower_components/modular-scale/stylesheets/_modular-scale";
+@import "../bower_components/sass-rem/rem";
+@import "../bower_components/scut/dist/scut";
+@import "../bower_components/sass-mediaqueries/media-queries";
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../bower_components/neat/app/assets/stylesheets/neat";
+
+
+@import "_global-variables";
+
+// Ratio to use in the site
+$ratio: $golden;
+
+// Set the baseline for the rem calculations to our default value
+$rem-baseline: $font-size;
+
+@import "layout/page-elements";
+@import "layout/ui-components";
+@import "layout/playing-cards";
+
+html {
+	 @include rem-baseline;
+	 height: 100%;
+}
+
+body {
+    position: relative;
+    height: 100%;
+}
+
+.debug {
+	// border:1px solid red;
+}
+
+.disabled {
+	opacity: .5;
+}
+
+.hidden {
+	display: none;
+}
+
+.pe-disabled {
+	pointer-events: none;
+}
+
+.faded {
+	opacity: 0;
+}
+
+.cananimate {
+	transition: opacity .25s ease-in-out;
+}

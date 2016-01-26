@@ -1,0 +1,27 @@
+.button, input {
+  border: 3px solid grey;
+  @include rem('width', 180px);
+}
+.button {
+	cursor: pointer;
+  & p {
+    // border: 1px solid green;
+    text-align: center;
+  }
+}
+.button--shuffle {
+  // position: relative;
+  // @include rem('top', 30px);
+  // @include rem('left', 30px);
+}
+
+.disabled {
+  cursor: auto;
+}
+
+input {
+  @include rem(padding-left, 20px);
+  @include rem(font-size, 28px);
+  color: grey;
+
+}

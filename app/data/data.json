@@ -1,0 +1,26 @@
+{
+	"config": [
+		{
+			"type": "settings",
+      "props": {
+        "ace_high": true,
+        "suit_order": ["c", "s", "h", "d"],
+        "card_order": ["2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"]
+      }
+    },
+    {
+      "type": "ui",
+      "props": {
+        "shuffle_label": "Shuffle Deck",
+        "draw_label": "Draw Cards",
+        "sort_label": "Sort Cards"
+      }
+    },
+    {
+      "type": "messaging",
+      "props": {
+        "draw_error": "You must draw between 1 and 51 cards"
+      }
+    }
+  ]
+}

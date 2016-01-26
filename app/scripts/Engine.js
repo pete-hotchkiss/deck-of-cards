@@ -114,20 +114,19 @@ var Engine = function( d ) {
 
   /**
   Sorts the extracted cards according to a given set of rules defined in the spec
-//fruits.indexOf("Apple")
   @method sortcards
   */
   this.sortcards = function() {
-    // console.log("the cards need ordering");
 
     var suit_order = this.config.getProp('settings', 'suit_order');
     var card_order = this.config.getProp('settings', 'card_order');
-    // ['c', 's', 'h', 'd'];
 
+    console.log("Sort order is", suit_order);
     this.drawncards.sort(
       function(a, b) {
         var ina = suit_order.indexOf( a.charAt(0) );
         var inb = suit_order.indexOf( b.charAt(0) );
+
         var cina = card_order.indexOf( a.charAt(1) );
         var cinb = card_order.indexOf( b.charAt(1) );
         return ( ina < inb ) ? -1 : ( ina > inb ) ? 1 : (cina < cinb) ? -1 : ( cina > cinb ) ? 1 : 0;

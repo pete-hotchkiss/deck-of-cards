@@ -51,7 +51,7 @@ var Config = function( c ) {
 	@param {String} s - card identifier like c6 for 6 of clubs
 	*/
 	this.getMap = function( s ) {
-		var suits = this.getProp('settings', 'suit_order');
+		var suits = this.getProp('settings', 'suite_graphic_order');
 		var cards = this.getProp('settings', 'card_order');
 		return {
 			'row': suits.indexOf( s.charAt(0) ),

@@ -29,6 +29,8 @@ Hitting __Draw Cards__ will then extract the cards and display them in their uns
 
 3 - Code is being tested using QUnit with a test runner wrapper set up in /app/test-runner.html. Which can be browsed to when ```gulp serve``` is running
 
+4 - Easter egg feature, allows for easy configuration of the suit ordering. in the _app/data/data.json__ file simply edit the order of the characters in the  ```suit_order``` node and the app will match this ruling at runtime. *note* Dont confuse this with the ```suite_graphic_order``` node which should not be edited as this is a permanent map to the order in which the grpaihcs for each suit are ordered in the card graphic sprite sheet
+
 ### Revision History
 Love git I do. But sometimes it just goes south. I'm not great at wrestling with exporting repos from one server to the other. So bummer - lost my revision history
 
